@@ -1,0 +1,3 @@
+Danish: 85
+Ali: 90
+Sara: 88
