@@ -192,25 +192,28 @@ outer()
 # 1-we can access inner function only inside outer function that provide Encapsulation
 # 2-Nested function are commonly used in closures and decorators
 
-# parameters vs arguments
+'''parameters vs arguments
 # parameters: varibales define in function() for holding actual values 
-# arguments:value provided at function call
+# arguments:value provided at function call'''
 # Types of arguments
-# 1-positional, 
+
+'''1-positional'''
+
 def display(name, age):
     print(f"name is: {name} and age is {age}.")
 
-# while passing arguments order and numbers should be maintained
+'''while passing arguments order and numbers should be maintained'''
 display('Saqib', 29)
 
 # display(29,'Saqib')  
 # display('saqib') # error 1 arguments is missing
 # display("saqib", 29, 30) #error more than 2 arguments 
 
-# 2-keyword
-# used when we actually dont know the sequence of parametrs mention in function statement of another modules
+'''2-keyword
+# used when we actually dont know the sequence of parameters mention in function statement of another modules
 # we dont need to maintained order of arguments
-# but we cannot pass more arguments than paramets assigned in function
+# but we cannot pass more arguments than paramets assigned in function'''
+
 def user(name,email):
     print(f"Name is {name}, Email is {email}")
 
@@ -218,13 +221,13 @@ user(name= 'Saqib', email = 'saqibjawad52@gmail.com')
 user(email = 'saqibjawad52@gmail.com', name= 'Saqib')
 # user(email = 'saqibjawad52@gmail.com', name= 'Saqib', password = '0001')  #TypeError: user() got an unexpected keyword argument 'password'
  
-# mixing keyword and positional arguments
+'''mixing keyword and positional arguments'''
 def user(name,email):
     print(f"Name is {name}, Email is {email}.")
 
 user('Saqib', email = 'saqibjawad52@gmail.com')
 # user(email = 'saqibjawad52@gmail.com', 'Saqib') #SyntaxError: positional argument follows keyword argument
-# Positional arguments must come BEFORE keyword arguments
+'''Positional arguments must come BEFORE keyword arguments'''
 
 
 '''3-default 
@@ -282,13 +285,13 @@ print(add_item(3))
 print(add_item.__defaults__)
 # Because the same list is reused every time.
 
-# def test(x=[]):
-#     print(id(x))
-#     x.append(1)
+def test(x=[]):
+    print(id(x))
+    x.append(1)
 
-# test()
-# test()
-# test()
+test()
+test()
+test()
 
 # Real-world Example
 def register(name, role="user", active=True):
@@ -323,7 +326,7 @@ addition(10,20,10)
 addition(40,50,60)
 
 
-# variable length keyword arguments
+'''variable length keyword arguments'''
 
 def display (**nums):
     print(nums) # will return a dictionary
@@ -376,10 +379,9 @@ def calculate_bill(*prices, tax=0, **extras):
     return total
     
 
+'''Note: default arguments never come first while keyword arguments will never come first'''
 
-
-
-
+'''# order: positional arguments --> *pargs --> keyword arguments -->**kwargs --> default arguments'''
 
 
 
