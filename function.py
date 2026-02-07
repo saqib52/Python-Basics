@@ -389,7 +389,6 @@ def calculate_bill(*prices, tax=0, **extras):
 
 
 
-
 def f(x):
     return lambda y: x + y
 
