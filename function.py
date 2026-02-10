@@ -383,9 +383,148 @@ def calculate_bill(*prices, tax=0, **extras):
 
 '''# order: positional arguments --> *pargs --> keyword arguments -->**kwargs --> default arguments'''
 
+'''First class Functions
+just like string has first class objects functions are also
+In Python, functions are first-class objects, meaning they can be used just like variables.
+
+properties:
+1.They are instance of some class
+2.can be assigned to variables
+3.can perform operation on these objects
+4.can be passed as arguments to functions
+5.can be returned
+6.can be stored in data Structures'''
+
+# They are instance of some class
+def display():
+    print(f"{display} is an object")
+display()
+
+# can be assigned to variables
+
+def greet():
+    print("Hello world!")
+
+say_hi= greet       # no parentheses
+say_hi()
+
+# You didn’t copy the function, You copied the reference to the function.
+
+'''Function pasing as arguments'''
+
+# any object can be passed as arguments ti functions
+
+'''Example # 1'''
+def get_name():
+    f_name = input("Enter your First Name:")
+    l_name = input("Enter your Last Name:")
+    return f_name + " " + l_name
+
+
+def display(func):
+    # print(func)
+    print(func())
+
+display(get_name)
+
+'''Example # 2'''
+
+def shout(text):
+    print(text.upper())
+
+def whisper(text):
+    print(text.lower())
+
+def speak(func):
+    func("Hello Python")
+
+speak(shout)
+speak(whisper)
+'''use cases'''
+# Custom behavior (simple & intuitive)
+# You want one function, but behavior should change based on situation.
+
+'''BAD ways'''
+
+def process(data, mode):
+    if mode == "sum":
+        return sum(data)
+    elif mode == "max":
+        return max(data)
+    elif mode == "min":
+        return min(data)
+
+'''Example # 3'''
+def process(data,operation):
+    return operation(data)
+
+print(process([1,2,3], sum))
+print(process([1,2,3], max))
+print(process([1,2,3], min))
+
+
+'''Example # 3: Payment strategy'''
+
+def credit_card(amount):
+    return f"paid {amount} using credit card"
+
+def paypal(amount):
+    return f"paid {amount} using paypal"
+
+def checkout(amount, payment_method):
+    return payment_method(amount)
+
+
+print(checkout(500, credit_card))
+print(checkout(1000, paypal))
+
+'''Final takeaway
+Passing functions as arguments = behavior injection
+That’s:
+1.Custom behavior
+2.Strategy Pattern
+3.Callbacks
+4.Clean architecture
+
+ Callback — simple meaning
+A callback is a function that you give to another function, so it can be called later.'''
+
+
+'''Functions can be returned from other functions'''
+
+def display():
+    print("Hello")
+    def printer():
+        print("welcome")
+    return printer
+
+g = display()
+g()
 
 
 
+
+# Functions can be returned from other functions
+
+def multiplier(n):
+    def multiply(x):
+        return x * n
+    return multiply
+
+double = multiplier(2)
+print(double(5))   # 10
+
+# with this it is possible to call local objects in global space
+
+
+
+# Functions can live inside data structures
+operations = {
+    "add": lambda a, b: a + b,
+    "mul": lambda a, b: a * b
+}
+
+print(operations["add"](3, 4))
 
 
 

@@ -115,18 +115,12 @@ square = lambda: [i*i for i in [3,4,5,6]]
 print(square())
 
 
-# IIFE concepts of JAVASCRIPTS
+# IIFE: immediately Invoked Function Expression concepts of JAVASCRIPTS 
+# with normal func we can not implement IIFE
+# “Run this logic right now and then forget the function exists.”
+# Python doesn’t officially support IIFE — it’s a hack, usually with lambda.
+
 
 result = (lambda a,b: a+b)(4,5)
 print(result)
-
-'''First class Functions'''
-
-properties:
-# they are instance of some class
-# can be stored in dat Structures
-# can be assigned to variables
-# can perform operation on these objects
-# can be passed as arguments to functions
-# can be returned
 
