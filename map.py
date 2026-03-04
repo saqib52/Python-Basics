@@ -1,5 +1,6 @@
 """use case: when we have a list and we have to apply
-same operation to each item in list"""
+same operation to each item in list
+return iterable always"""
 
 # withou map: more lines, more code
 num = [1,2,3,4,5]

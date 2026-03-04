@@ -412,14 +412,13 @@ say_hi()
 
 '''Function pasing as arguments'''
 
-# any object can be passed as arguments ti functions
+# any object can be passed as arguments to functions
 
 '''Example # 1'''
 def get_name():
     f_name = input("Enter your First Name:")
     l_name = input("Enter your Last Name:")
     return f_name + " " + l_name
-
 
 def display(func):
     # print(func)
@@ -428,18 +427,32 @@ def display(func):
 display(get_name)
 
 '''Example # 2'''
-
+# Define a function called 'shout'
+# It takes one parameter: text
 def shout(text):
+    # Convert the text to uppercase and print it
     print(text.upper())
 
+# Define a function called 'whisper'
+# It takes one parameter: text
 def whisper(text):
+    # Convert the text to lowercase and print it
     print(text.lower())
 
+# Define a function called 'speak'
+# It takes another function as its parameter (func)
 def speak(func):
     func("Hello Python")
-
+# Call speak() and pass the shout function as an argument
 speak(shout)
+# Call speak() and pass the whisper function as an argument
 speak(whisper)
+
+
+'''speak is a higher-order function because it accepts another function as a parameter.
+shout and whisper are used as function objects (without parentheses when passed).'''
+
+
 '''use cases'''
 # Custom behavior (simple & intuitive)
 # You want one function, but behavior should change based on situation.
@@ -501,9 +514,6 @@ def display():
 g = display()
 g()
 
-
-
-
 # Functions can be returned from other functions
 
 def multiplier(n):
@@ -525,6 +535,9 @@ operations = {
 }
 
 print(operations["add"](3, 4))
+
+    
+
 
 
 

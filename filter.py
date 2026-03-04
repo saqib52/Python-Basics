@@ -1,4 +1,5 @@
 '''You have a list You want only some values based on a condition Function must return True or False'''
+# filter function take an iterator and function
 
 # without map
 num = [1,2,3,4,5,6]
@@ -26,3 +27,19 @@ num2 = [1, 2, 3, 4, 5]
 evens = filter(lambda x: x % 2 == 0, num2)
 print(list(evens))
 
+
+str= "saqib"
+vowels_list = ['a','e','i','o','u']
+def vowels(ch):
+    if ch in vowels_list:
+        return True
+    
+result = filter(vowels,str)
+print(list(result))
+
+# filter with lambda
+
+str= "saqib"
+vowels_list = ['a','e','i','o','u']
+result = filter(lambda ch: ch in vowels_list, str)
+print(list(result))
