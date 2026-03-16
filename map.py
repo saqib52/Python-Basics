@@ -11,7 +11,7 @@ print(double)
 
 # map() exists to do this in one step
 '''Think of map() like a machine:
-It takes a function, a list It: Takes one item from list sends it into the function
+It takes a function, a list It takes one item from list sends it into the function
 Stores result and repeats'''
 
 # Note: map does not return a list
@@ -43,3 +43,4 @@ print("cal = ",list(cal))
 salaries = [1000, 2000, 3000]
 new_salaries = map(lambda s: s + 500, salaries)
 print(list(new_salaries))
+
