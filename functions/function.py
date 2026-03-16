@@ -241,14 +241,12 @@ def greet(name = 'Guest'):
 greet('Saqib') #arguments given
 greet() # no arguments guest is used
 
-
-
-
 def power(base, exp=2):
     return base ** exp
 
 print(power(5))     # 25 → default square
 print(power(5, 3))  # 125 → cube
+
 
 def total_cost(items, currency = 'USD'):
     total = sum(items.values())
