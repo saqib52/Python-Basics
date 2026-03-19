@@ -411,3 +411,9 @@ print(b)
 a=[1,2]
 a=a+[3]
 print(a)
+
+
+fruits = ["apple", "banana", "cherry"]
+
+for i in range(len(fruits)):
+    print(i, fruits[i])

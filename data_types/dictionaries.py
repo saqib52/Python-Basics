@@ -9,3 +9,7 @@ print(car)
 print(car.keys())
 print(car.values())
 print(car.items())
+
+
+seen = {2:0}
+print(seen[2])
